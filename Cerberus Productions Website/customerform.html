@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cerberus Productions</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header><h1>Cerberus Productions</h1></header>
+<nav><ul><li><a href="index.html">Home</a></li><li><a href="gallery.html">Images</a></li><li><a href="resources.html">Resources</a></li><li><a href="staffdirectory.html">Staff</a></li></ul></nav>
+<main>
+	<form method="post" id="inforequest" action="mailto:e-mailaddress">
+		E-mail: <input type="text" name="email" id="email" required="required"><br>
+		Phone Number: <input type="text" name="phone" id="phone" required="required"><br>
+		Preferred Method of Contact:<br>
+		<input type="radio" name="prefcontact" id="prefemail" value="email">Email<br>
+		<input type="radio" name="prefcontact" id="prefphone" value="phone">Phone<br>
+		What would you like to receive information on?<br>
+		<input type="checkbox" name="info" id="infocurrentproj" value="yes"> Current Projects<br>
+		<input type="checkbox" name="info" id="infoPostProd" value="yes"> Post-Production Services<br>
+		<input type="checkbox" name="info" id="infofilmprod" value="yes"> Film Production Services<br>
+		<input type="checkbox" name="info" id="infoscript" value="yes"> Script Development<br>
+		<input type="checkbox" name="info" id="infostoryconsult" value="yes"> Story Consulting<br>
+		<select size="1" name="customertype" id="customertype">
+			<option>Current Role</option>
+			<option value="Filmaker">Filmaker</option>
+			<option value="Actor">Actor</option>
+			<option value="Student">Student</option>
+			<option value="Writer">Writer</option>
+		</select><br>
+		Preferred Contact Date: <br>
+		<input type="date" name="contactdate" id="contactdate"><br>
+		Comments:<br>
+		<textarea name="comments" id="comments" cols="40" rows="2">Enter any additional comments here.</textarea><br>
+		<input type="submit">
+		<input type="reset">
+	</form>
+</main>
+<footer><strong><em>&copy; 2025 Audrey Waggener, Cerberus Inc.</em> For more information contact us at <a style="font-style:italic;text-decoration:none" href="mailto:CerberusProductions@email.com">CerberusProductions@email.com</a></strong></footer>
+<h3>This document was last modified on:
+<script>
+document.write(document.lastModified);
+</script>
+</h3>
+<body>
+</html>

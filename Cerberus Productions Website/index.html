@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+function getName()
+{
+var userName;
+userName = prompt("Enter your name:");
+alert('Welcome, ' + userName);
+}
+function howLong()
+{
+var currentDate=new Date()
+var releaseDate=new Date("November 27, 2026")
+var daysSubtracted=releaseDate - currentDate;
+var daysTill= Math.ceil(daysSubtracted/(1000*60*60*24));
+document.write("There are " + daysTill + " more days until our next movie comes out!");
+}
+function getQuote()
+{
+var quoteArray= new Array()
+quoteArray[0] = "We currently have 13 movies in production.";
+quoteArray[1] = "10 of our movies have been nominated for Oscar Awards, 3 have won.";
+quoteArray[2] = "We film at locations all over the world.";
+quoteArray[3] = "Our productions are in a variety of genres.";
+quoteArray[4]= "Let us help you make the next greatest film.";
+var randNum = Math.floor(Math.random()*5);
+document.write(quoteArray[randNum]);
+}
+</script>
+<head>
+<title>Cerberus Productions</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+.spotlight {
+  position: fixed;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,200,0.8) 0%, rgba(255,255,200,0) 70%);
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  animation: fadeOut 2s forwards;
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+</style>
+<script>
+function spotlightEffect() {
+  setInterval(() => {
+    const light = document.createElement("div");
+    light.className = "spotlight";
+    light.style.left = Math.random() * (window.innerWidth - 200) + "px";
+    light.style.top = Math.random() * (window.innerHeight - 200) + "px";
+    document.body.appendChild(light);
+    setTimeout(() => light.remove(), 2000); // remove after fade
+  }, 1500); // new spotlight every 1.5 seconds
+}
+
+// run automatically
+window.onload = spotlightEffect();
+</script>
+</head>
+<body onLoad="getName();">
+<header><h1 style="color:#B0B0B0;font-family:Cinzel, serif">Cerberus Productions</h1></header>
+<nav><ul style="color:#8B0000;font-family:Cinzel, serif"><li><a href="resources.html">Resources</a></li><li><a href="gallery.html">Images</a></li><li><a href="staffdirectory.html">Staff</a></li><li><a href="customerform.html">Contact Us</a></li></ul></nav>
+<main>
+<h3>
+<script>
+howLong();
+</script>
+</h3> 
+<h2 style="color:#B0B0B0;font-family:Cinzel, serif">About Us</h2>
+<p style="color:#8B0000;font-family:'Playfair Displey', serif"><em>Guarding originality. Forging cinematic fire.</em><p>
+<p><strong>Cerberus Productions</strong> is a dynamic film production company dedicated to crafting bold, emotionally resonant, and visually striking cinematic experiences. Founded on the belief that powerfull storytelling can challenge perspectives and ignite imagination, Cerberus Productions blends an artistic vision with cutting-edge production techniques to deliver films that captivate global audiences.</p>
+<p style="color:#8B0000;font-family:Cinzel, serif"><em>Where vision meets velocity</em></p>
+<p>With a name inspired by the mythological guardian of the underworld, Cerberus Productions stands as a fierce protector of creative integrity, championing original voices and fearless narratives. From concept development to post-production, our company offers end-to-end services that support filmmakers in realizing their vision, whether it's an indie drama, genre-bending thriller, or high-concept sci-fi epic.</p>
+<h2 style="color:#B0B0B0;font-family:Cinzel, serif">Our Services</h2>
+<dl><dt><strong>Film Production</strong></dt><dd>Cerberus Productions offers full-scale film production services from concept development to final cut. Whether it's a short film, feature-length narrative, or experimental piece, we bring bold stories to life with precision, passion, and a fearless creative spirit.</dd><dt><strong>Script Development and Story Consulting</strong></dt><dd>We collaborate with writers and creators to refine scripts, strengthen narrative arcs, and elevate character development. Our story consulting team ensures that every project starts with a solid foundation and a compelling voice that resonates with audiences.</dd><dt><strong>Post-Production Services</strong></dt><dd>Our post production team handles editing, sound design, visual effects, and color grading to deliver polished and cinematic results. We transform raw footage into immersive experiences that meet both artistic and technical standards.</dd></dl>
+<h2>Our team at work</h2>
+<video controls="controls"><source src="atwork.mp4" type="video/mp4"></video>
+<h3>
+<script>
+getQuote();
+</script>
+</h3>
+</main>
+<footer><strong><em>&copy; 2025 Audrey Waggener, Cerberus Inc.</em> For more information contact us at <a href="mailto:CerberusProductions@email.com">CerberusProductions@email.com</a></strong></footer>
+<h3>This document was last modified on:
+<script>
+document.write(document.lastModified);
+</script>
+</h3>
+<body>
+</html>
